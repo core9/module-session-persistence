@@ -2,5 +2,7 @@ language: java
 env:
   global:
   - TERM=dumb
+  - secure: M3xEnbPiZP2InZZRQukXVlLnzf1jEIMdzVXbZ71mZpz3pwBqK/jd/J1kqRETVpUADitiSGRCZI1mYoDxe3hdvig5FsZ8jpeA0/OCb4kLriHIE8N9ByOGFePgNnkMr0sw2ReshxQFxJsWTNgcx2khmr8mGJO8KaY3T8TNYfdmifw=
+  - secure: KE4Sxh27T0srXPE1Jsjs/j82XdNbI9phAS2IoHSdkfFFRCmEMbgmw4Kyi9fwjYByLZG9oLBlUkJJAMLqZM+q1QQEBp6SmkhWFOMUFrmT5Vw0bEVAKg3CiYPo6eWOZXUVUcJxocv6FQyz+t1awiVbLz/xHNoIfO71DqcdaRSBNg4=
 install:
 - ./gradlew clean test build publish publishBintray
