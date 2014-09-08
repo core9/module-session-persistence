@@ -1,0 +1,6 @@
+language: java
+env:
+  global:
+  - TERM=dumb
+install:
+- ./gradlew clean test build publish publishBintray
