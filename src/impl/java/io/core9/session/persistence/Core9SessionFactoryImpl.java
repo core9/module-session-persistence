@@ -3,6 +3,7 @@ package io.core9.session.persistence;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SessionContext;
 import org.apache.shiro.session.mgt.SessionFactory;
+import org.apache.shiro.session.mgt.SimpleSession;
 
 public class Core9SessionFactoryImpl implements SessionFactory {
 	
@@ -19,7 +20,7 @@ public class Core9SessionFactoryImpl implements SessionFactory {
 
 	@Override
 	public Session createSession(SessionContext initData) {
-		SessionEntity entity = new SessionEntity();
+		SimpleSession entity = new SimpleSession();
 		if (initData != null) {
             String host = initData.getHost();
             if (host != null) {
@@ -27,7 +28,7 @@ public class Core9SessionFactoryImpl implements SessionFactory {
                 return entity;
             }
         }
-        return new SessionEntity();
+        return new SimpleSession();
 	}
 
 }
